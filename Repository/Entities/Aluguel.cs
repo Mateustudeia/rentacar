@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FluentNHibernate.Mapping;
 
 namespace Repository.Entities
@@ -11,6 +12,7 @@ namespace Repository.Entities
         public virtual DateTime DataDevolucao { get; set; }
         public virtual float ValorTotal { get; set; }
         public virtual Veiculo Veiculo { get; set; }
+        public virtual IList<Cliente> Clientes { get; set; }
 
     }
     public class AluguelMap : ClassMap<Aluguel>
@@ -24,6 +26,7 @@ namespace Repository.Entities
             Id(x => x.DataDevolucao).Column("data_devolucao");
             Id(x => x.ValorTotal).Column("valor_total");
             References(x => x.Veiculo);
+            HasManyToMany(x => x.Clientes).Table("cliente_aluguel").ParentKeyColumn("aluguel_id").ChildKeyColumn("client_id");
         }
     }
 }
