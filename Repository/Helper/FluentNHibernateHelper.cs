@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Repository.Entities;
 
 namespace Repository.Helper
 {
@@ -30,9 +31,18 @@ namespace Repository.Helper
                             .Username("postgres")
                             .Password("postgres")
                     ).DefaultSchema("public"))
-                //.Mappings(m =>
-                   // m.FluentMappings
-                        //.AddFromAssemblyOf<ENTITY>()
+
+                .Mappings(m =>
+                    m.FluentMappings
+                        .AddFromAssemblyOf<Aluguel>()
+                        .AddFromAssemblyOf<Cliente>()
+                        .AddFromAssemblyOf<Estado>()
+                        .AddFromAssemblyOf<Localidade>()
+                        .AddFromAssemblyOf<Marca>()
+                        .AddFromAssemblyOf<Modelo>()
+                        .AddFromAssemblyOf<Municipio>()
+                        .AddFromAssemblyOf<Veiculo>()
+                    )
 
                 .ExposeConfiguration(cfg => new SchemaExport(cfg)
                     .Create(false, false))
