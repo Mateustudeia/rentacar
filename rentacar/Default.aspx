@@ -3,8 +3,13 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>rentacar</h1>
-        <h4>Sistema para controle de aluguel de veículos.</h4>
+        <h1><strong>rentacar</strong></h1>
+        <h3>Sistema para controle de aluguel de veículos.</h3>
+    </div>
+    <div>
+        <h3>Veículos disponíveis:</h3>
+        <asp:GridView ID="VeiculosGridView" runat="server">
+        </asp:GridView>
     </div>
 
 </asp:Content>

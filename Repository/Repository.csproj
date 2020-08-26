@@ -75,6 +75,7 @@
     <Compile Include="Repositories\ClienteRepositorio.cs" />
     <Compile Include="Repositories\Interfaces\ICrud.cs" />
     <Compile Include="Repositories\Repositorio.cs" />
+    <Compile Include="Repositories\VeiculoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

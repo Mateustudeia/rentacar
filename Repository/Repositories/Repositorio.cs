@@ -26,9 +26,9 @@ namespace Repository.Repositories
                         if (!transacao.WasCommitted)
                         {
                             transacao.Rollback();
-                            throw new Exception("Foi commitado. Erro ao inserir : " + ex.Message + entidade);
+                            throw new Exception("Foi commitado. Erro ao inserir: " + ex.Message + entidade);
                         }
-                        throw new Exception("Erro ao inserir : " + ex.Message);
+                        throw new Exception("Erro ao inserir: " + ex.Message);
                     }
                 }
             }
@@ -53,7 +53,7 @@ namespace Repository.Repositories
                             transacao.Rollback();
                             return false;
                         }
-                        throw new Exception("Erro ao Alterar Cliente : " + ex.Message);
+                        throw new Exception("Erro ao alterar: " + ex.Message);
                     }
                 }
             }
@@ -78,7 +78,7 @@ namespace Repository.Repositories
                             transacao.Rollback();
                             return false;
                         }
-                        throw new Exception("Erro ao Excluir Cliente : " + ex.Message);
+                        throw new Exception("Erro ao excluir: " + ex.Message);
                     }
                 }
             }
