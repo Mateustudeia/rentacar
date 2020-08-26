@@ -21,7 +21,7 @@ namespace Repository.Entities
             Id(x => x.Id).Column("id");
             Map(x => x.Nascimento).Column("nascimento");
             Map(x => x.Nome).Column("nome");
-            Map(x => x.Cpf).Column("nascimento");
+            Map(x => x.Cpf).Column("cpf");
             Map(x => x.Telefone).Column("telefone");
             Map(x => x.Email).Column("email");
         }

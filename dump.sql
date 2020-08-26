@@ -29,7 +29,7 @@ CREATE TABLE public.aluguel (
     data_emprestimo date NOT NULL,
     data_devolucao_contratada date NOT NULL,
     data_devolucao date,
-    valor_total date,
+    valor_total double precision,
     veiculo_id integer NOT NULL
 );
 
