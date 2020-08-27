@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rentacar", "rentacar\rentac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{2C4348CB-E359-4CC9-BB26-70A85433920F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{5E94FAA4-6C4D-4E0E-9656-1CAE8BFB848F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C4348CB-E359-4CC9-BB26-70A85433920F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C4348CB-E359-4CC9-BB26-70A85433920F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C4348CB-E359-4CC9-BB26-70A85433920F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E94FAA4-6C4D-4E0E-9656-1CAE8BFB848F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E94FAA4-6C4D-4E0E-9656-1CAE8BFB848F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E94FAA4-6C4D-4E0E-9656-1CAE8BFB848F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E94FAA4-6C4D-4E0E-9656-1CAE8BFB848F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

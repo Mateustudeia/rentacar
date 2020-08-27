@@ -25,7 +25,7 @@ namespace Repository.Helper
                 .Database(PostgreSQLConfiguration.PostgreSQL82
 
                     .ConnectionString(c =>
-                        c.Host("192.168.1.196")
+                        c.Host("localhost")
                             .Port(5432)
                             .Database("rentacar")
                             .Username("postgres")
