@@ -26,7 +26,12 @@ namespace Repository.Entities
             Map(x => x.Cpf).Column("cpf");
             Map(x => x.Telefone).Column("telefone");
             Map(x => x.Email).Column("email");
-            HasManyToMany(x => x.Alugueis).Table("cliente_aluguel").ParentKeyColumn("client_id").ChildKeyColumn("aluguel_id");
+
+            HasManyToMany(x => x.Alugueis)
+                .Table("cliente_aluguel")
+                //.ParentKeyColumn("client_id")
+                //.ChildKeyColumn("aluguel_id")
+                .Not.LazyLoad();
         }
     }
 }
