@@ -19,6 +19,7 @@ namespace Api.Controllers
             return business.listar();
         }
 
+        [HttpGet]
         public Cliente Get(int id)
         {
             return business.buscarPorId(id);
@@ -41,6 +42,7 @@ namespace Api.Controllers
             }
         }
 
+        [HttpPost]
         public void Excluir(int id)
         {
             business.excluir(business.buscarPorId(id));
