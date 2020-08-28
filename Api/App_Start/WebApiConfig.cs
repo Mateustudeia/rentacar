@@ -13,7 +13,7 @@ namespace Api
             config.MapHttpAttributeRoutes();
 
             config.Formatters.JsonFormatter.SupportedMediaTypes
-                .Add(new MediaTypeHeaderValue("text/html"));
+                .Add(new MediaTypeHeaderValue("application/json "));
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
