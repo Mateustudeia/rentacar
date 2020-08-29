@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Web.Http;
-using System.Web.Optimization;
 using Api.Business.ClienteBusiness;
 using Microsoft.Ajax.Utilities;
 using Repository.Entities;
@@ -32,13 +30,18 @@ namespace Api.Controllers
                           && cliente.Email != null
                           && !cliente.Nome.IsNullOrWhiteSpace();
 
-            if (valida)
+            if (!valida)
+            {
+                throw new InvalidDataException("Um dos campos obrigatórios está vazio.");
+            }
+
+            if (cliente.Id != null)
             {
                 business.salvar(cliente);
             }
             else
             {
-                throw new InvalidDataException("Um dos campos obrigatórios está vazio.");
+                business.editar(cliente);
             }
         }
 
