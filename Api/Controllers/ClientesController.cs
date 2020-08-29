@@ -23,6 +23,12 @@ namespace Api.Controllers
             return business.buscarPorId(id);
         }
 
+        [HttpGet]
+        public Cliente GetByCpf(string cpf)
+        {
+            return business.buscarPorCpf(cpf);
+        }
+
         [HttpPost]
         public void Salvar([FromBody]Cliente cliente)
         {

@@ -7,7 +7,7 @@ namespace Api.Business.ClienteBusiness
 {
     public class ClienteBus
     {
-        private Repositorio<Cliente> repositorio = new Repositorio<Cliente>();
+        private ClienteRepositorio repositorio = new ClienteRepositorio();
 
         public IList<Cliente> listar()
         {
@@ -26,7 +26,7 @@ namespace Api.Business.ClienteBusiness
 
         internal Cliente buscarPorCpf(string cpf)
         {
-                //Calma lá garotinho, ainda não!
+            return repositorio.buscarPorCpf(cpf);
         }
 
         public Cliente editar(Cliente novoCliente)
