@@ -26,7 +26,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public void Cadastra([FromBody]Cliente cliente)
+        public void Salvar([FromBody]Cliente cliente)
         {
             bool valida = cliente.Cpf != null
                           && cliente.Email != null

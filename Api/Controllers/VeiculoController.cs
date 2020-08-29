@@ -22,7 +22,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public void Cadastra([FromBody]Veiculo veiculo)
+        public void Salvar([FromBody]Veiculo veiculo)
         {
             if (veiculo.Chassis != null)
             {
