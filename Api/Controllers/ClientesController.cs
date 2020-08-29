@@ -41,7 +41,7 @@ namespace Api.Controllers
                 throw new InvalidDataException("Um dos campos obrigatórios está vazio.");
             }
 
-            if (cliente.Id != null)
+            if (cliente.Id == null)
             {
                 business.salvar(cliente);
             }
