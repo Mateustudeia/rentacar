@@ -8,7 +8,7 @@ namespace Repository.Entities
     {
         public virtual int Id { get; set; }
         public virtual String Bairro { get; set; }
-        public virtual String Rua { get; set; }
+        public virtual String Logradouro { get; set; }
         public virtual int Numero { get; set; }
         public virtual String Nome { get; set; }
         public virtual Municipio Municipio { get; set; }
@@ -22,7 +22,7 @@ namespace Repository.Entities
             Table("localidade");
             Id(x => x.Id).Column("id");
             Map(x => x.Bairro).Column("bairro");
-            Map(x => x.Rua).Column("rua");
+            Map(x => x.Logradouro).Column("logradouro");
             Map(x => x.Numero).Column("numero");
             Map(x => x.Nome).Column("nome");
             References(x => x.Municipio);

@@ -32,7 +32,7 @@ namespace Api.Controllers
             bool invalido = localidade.Nome.IsNullOrWhiteSpace()
                             || localidade.Municipio == null
                             || localidade.Bairro.IsNullOrWhiteSpace()
-                            || localidade.Rua.IsNullOrWhiteSpace();
+                            || localidade.Logradouro.IsNullOrWhiteSpace();
 
             if (!invalido)
             {
