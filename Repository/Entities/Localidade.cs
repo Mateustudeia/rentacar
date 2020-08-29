@@ -12,7 +12,7 @@ namespace Repository.Entities
         public virtual int Numero { get; set; }
         public virtual String Nome { get; set; }
         public virtual Municipio Municipio { get; set; }
-        public virtual IList<Veiculo> Veiculos { get; set; }
+        //public virtual IList<Veiculo> Veiculos { get; set; }
     }
 
     public class LocalidadeMap : ClassMap<Localidade>
@@ -26,7 +26,7 @@ namespace Repository.Entities
             Map(x => x.Numero).Column("numero");
             Map(x => x.Nome).Column("nome");
             References(x => x.Municipio);
-            HasMany(x => x.Veiculos);
+            //HasMany(x => x.Veiculos).Not.LazyLoad();
         }
     }
 }

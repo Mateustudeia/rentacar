@@ -6,12 +6,12 @@ namespace Repository.Entities
 {
     public class Modelo
     {
-        public virtual int Id { get; set; }
+        public virtual int? Id { get; set; }
         public virtual String Nome { get; set; }
-        public virtual DateTime Ano { get; set; }
+        public virtual DateTime? Ano { get; set; }
         public virtual String Versao { get; set; }
         public virtual Marca Marca { get; set; }
-        public virtual IList<Veiculo> Veiculos { get; set; }
+        //public virtual IList<Veiculo> Veiculos { get; set; }
     }
 
     public class ModeloMap : ClassMap<Modelo>
@@ -24,7 +24,7 @@ namespace Repository.Entities
             Map(x => x.Ano).Column("ano");
             Map(x => x.Versao).Column("versao");
             References(x => x.Marca);
-            HasMany(x => x.Veiculos);
+            //HasMany(x => x.Veiculos);
         }
     }
 }
