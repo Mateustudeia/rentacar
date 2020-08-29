@@ -192,9 +192,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Business\AluguelBusiness\AluguelDTO.cs" />
+    <Compile Include="Business\AluguelBusiness\AluguelBus.cs" />
     <Compile Include="Business\MarcaBusiness\MarcaBus.cs" />
     <Compile Include="Business\ClienteBusiness\ClienteBus.cs" />
     <Compile Include="Business\VeiculoBusiness\VeiculoBus.cs" />
+    <Compile Include="Controllers\AluguelController.cs" />
     <Compile Include="Controllers\EstadoController.cs" />
     <Compile Include="Controllers\MarcasController.cs" />
     <Compile Include="Controllers\LocalidadesController.cs" />

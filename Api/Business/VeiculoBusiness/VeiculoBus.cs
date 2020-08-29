@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Management.Instrumentation;
 using Repository.Entities;
 using Repository.Repositories;
@@ -22,6 +23,12 @@ namespace Api.Business.VeiculoBusiness
         public Veiculo salvar(Veiculo veiculo)
         {
             return repositorio.Inserir(veiculo);
+        }
+
+        public IList<Veiculo> disponiveisEntreDatas(DateTime begin, DateTime end)
+        {
+            // IMPLEMENTA SAPORRA 67
+            throw new NotImplementedException();
         }
 
         public Veiculo editar(Veiculo novoVeiculo)
