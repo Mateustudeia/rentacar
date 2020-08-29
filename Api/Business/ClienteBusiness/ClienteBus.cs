@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Management.Instrumentation;
-using System.Runtime.CompilerServices;
-using System.Web.Optimization;
 using Repository.Entities;
 using Repository.Repositories;
 
@@ -27,9 +24,14 @@ namespace Api.Business.ClienteBusiness
             return repositorio.Inserir(cliente);
         }
 
+        internal Cliente buscarPorCpf(string cpf)
+        {
+                //Calma lá garotinho, ainda não!
+        }
+
         public Cliente editar(Cliente novoCliente)
         {
-            Cliente clienteSalvo = repositorio.RetornarPorId(novoCliente.Id);
+            Cliente clienteSalvo = repositorio.RetornarPorId(novoCliente.Id.GetValueOrDefault());
 
             if (clienteSalvo == null)
             {

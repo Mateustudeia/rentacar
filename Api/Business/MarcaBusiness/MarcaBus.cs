@@ -29,7 +29,7 @@ namespace Api.Business.MarcaBusiness
 
         public Marca editar(Marca novaMarca)
         {
-            Marca marcaSalva = repositorio.RetornarPorId(novaMarca.Id);
+            Marca marcaSalva = repositorio.RetornarPorId(novaMarca.Id.GetValueOrDefault());
 
             if (marcaSalva == null)
             {
