@@ -6,7 +6,7 @@ namespace Repository.Entities
 {
     public class Marca
     {
-        public virtual int Id { get; set; }
+        public virtual int? Id { get; set; }
         public virtual String Nome { get; set; }
         public virtual IList<Modelo> Modelos { get; set; }
     }
