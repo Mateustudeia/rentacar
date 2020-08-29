@@ -20,8 +20,8 @@ namespace Repository.Entities
             Id(x => x.Id).Column("id");
             Map(x => x.Chassis).Column("chassis");
             Map(x => x.Diaria).Column("diaria");
-            References(x => x.Localidade).Not.LazyLoad(); ;
-            References(x => x.Modelo).Not.LazyLoad(); ;
+            References(x => x.Localidade).Not.LazyLoad();
+            References(x => x.Modelo).Not.LazyLoad();
         }
     }
 }

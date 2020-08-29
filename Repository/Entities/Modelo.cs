@@ -23,7 +23,7 @@ namespace Repository.Entities
             Map(x => x.Nome).Column("nome");
             Map(x => x.Ano).Column("ano");
             Map(x => x.Versao).Column("versao");
-            References(x => x.Marca);
+            References(x => x.Marca).Not.LazyLoad();
             //HasMany(x => x.Veiculos);
         }
     }

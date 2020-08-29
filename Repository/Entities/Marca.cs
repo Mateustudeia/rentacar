@@ -18,7 +18,6 @@ namespace Repository.Entities
             Table("marca");
             Id(x => x.Id).Column("id");
             Map(x => x.Nome).Column("nome");
-            HasMany(x => x.Modelos);
         }
     }
 }
