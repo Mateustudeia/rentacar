@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Web.Http;
 using Api.Business.VeiculoBusiness;
 using Repository.Entities;
+using Repository.Repositories;
 
 namespace Api.Controllers
 {
@@ -19,6 +21,12 @@ namespace Api.Controllers
         public Veiculo Get(int id)
         {
             return business.buscarPorId(id);
+        }
+
+        public IList<Veiculo> filtrarPorDataLocalidade(Localidade localidade, DateTime DataEmprestimo,
+            DateTime DataDevolucao)
+        {
+            return business.disponiveisEntreDatas(DataEmprestimo, DataDevolucao, localidade);
         }
 
         [HttpPost]

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Management.Instrumentation;
+using System.Web.UI;
 using Repository.Entities;
 using Repository.Repositories;
 
@@ -8,7 +9,7 @@ namespace Api.Business.VeiculoBusiness
 {
     public class VeiculoBus
     {
-        private Repositorio<Veiculo> repositorio = new Repositorio<Veiculo>();
+        private VeiculoRepositorio repositorio = new VeiculoRepositorio();
 
         public IList<Veiculo> listar()
         {
@@ -25,10 +26,14 @@ namespace Api.Business.VeiculoBusiness
             return repositorio.Inserir(veiculo);
         }
 
-        public IList<Veiculo> disponiveisEntreDatas(DateTime begin, DateTime end)
+        public IList<Veiculo> disponiveisEntreDatas(DateTime begin, DateTime end, Localidade localidade)
         {
-            // IMPLEMENTA SAPORRA 67
-            throw new NotImplementedException();
+            if (begin > end)
+            {
+                throw new Exception("A data de início deve ser anterior à data de devolução");
+            }
+
+            return repositorio.listarDisponiveis(begin, end, localidade);
         }
 
         public Veiculo editar(Veiculo novoVeiculo)
