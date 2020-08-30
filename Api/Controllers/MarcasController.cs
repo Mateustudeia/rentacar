@@ -23,7 +23,7 @@ namespace Api.Controllers
         //[HttpGet]
         //public Marca Get(int id)
         //{
-        //    return repositorio.buscarPorId(id);
+        //    return repositorio.BuscarPorId(id);
         //}
 
         //[HttpPost]
@@ -33,7 +33,7 @@ namespace Api.Controllers
         //    {
         //        if (marca.Id == null) {
 
-        //            Marca marcaSalva = repositorio.buscarPorId(marca.Id.GetValueOrDefault());
+        //            Marca marcaSalva = repositorio.BuscarPorId(marca.Id.GetValueOrDefault());
 
         //            marcaSalva.Modelos.Clear();
 
@@ -42,7 +42,7 @@ namespace Api.Controllers
 
         //        }
 
-        //        repositorio.salvar(marca);
+        //        repositorio.Salvar(marca);
         //    }
         //    else
         //    {
@@ -53,7 +53,7 @@ namespace Api.Controllers
         //[HttpPost]
         //public void Excluir(int id)
         //{
-        //    repositorio.excluir(repositorio.buscarPorId(id));
+        //    repositorio.Excluir(repositorio.BuscarPorId(id));
         //}
     }
 }

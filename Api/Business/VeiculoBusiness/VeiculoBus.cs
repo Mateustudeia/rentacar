@@ -11,22 +11,22 @@ namespace Api.Business.VeiculoBusiness
     {
         private VeiculoRepositorio repositorio = new VeiculoRepositorio();
 
-        public IList<Veiculo> listar()
+        public IList<Veiculo> Listar()
         {
             return repositorio.Consultar();
         }
 
-        public Veiculo buscarPorId(int id)
+        public Veiculo BuscarPorId(int id)
         {
             return repositorio.RetornarPorId(id);
         }
 
-        public Veiculo salvar(Veiculo veiculo)
+        public Veiculo Salvar(Veiculo veiculo)
         {
             return repositorio.Inserir(veiculo);
         }
 
-        public IList<Veiculo> disponiveisEntreDatas(DateTime begin, DateTime end, Localidade localidade)
+        public IList<Veiculo> DisponiveisEntreDatas(DateTime begin, DateTime end, Localidade localidade)
         {
             if (begin > end)
             {
@@ -36,9 +36,9 @@ namespace Api.Business.VeiculoBusiness
             return repositorio.listarDisponiveis(begin, end, localidade);
         }
 
-        public Veiculo editar(Veiculo novoVeiculo)
+        public Veiculo Editar(Veiculo novoVeiculo)
         {
-            Veiculo veiculoSalvo = repositorio.RetornarPorId(novoVeiculo.Id);
+            Veiculo veiculoSalvo = repositorio.RetornarPorId(novoVeiculo.Id.GetValueOrDefault());
 
             if (veiculoSalvo == null)
             {
@@ -55,7 +55,7 @@ namespace Api.Business.VeiculoBusiness
             return veiculoSalvo;
         }
 
-        public bool excluir(Veiculo veiculo)
+        public bool Excluir(Veiculo veiculo)
         {
             return repositorio.Excluir(veiculo);
         }

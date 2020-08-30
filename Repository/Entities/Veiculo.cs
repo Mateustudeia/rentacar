@@ -5,7 +5,7 @@ namespace Repository.Entities
 {
     public class Veiculo
     {
-        public virtual int Id { get; set; }
+        public virtual int? Id { get; set; }
         public virtual String Chassis { get; set; }
         public virtual float Diaria { get; set; }
         public virtual Modelo Modelo { get; set; }

@@ -15,37 +15,48 @@ namespace Api.Controllers
         [HttpGet]
         public IEnumerable<Veiculo> Listar()
         {
-            return business.listar();
+            return business.Listar();
         }
 
         public Veiculo Get(int id)
         {
-            return business.buscarPorId(id);
+            return business.BuscarPorId(id);
         }
 
-        public IList<Veiculo> filtrarPorDataLocalidade(Localidade localidade, DateTime DataEmprestimo,
-            DateTime DataDevolucao)
+        public IList<Veiculo> FiltrarPorDataLocalidade(VeiculoDto filtro)
         {
-            return business.disponiveisEntreDatas(DataEmprestimo, DataDevolucao, localidade);
+            return business.DisponiveisEntreDatas(filtro.DataEmprestimo, filtro.DataDevolucao, filtro.Localidade);
         }
 
         [HttpPost]
         public void Salvar([FromBody]Veiculo veiculo)
         {
-            if (veiculo.Chassis != null)
-            {
-                business.salvar(veiculo);
-            }
-            else
+            if (veiculo.Chassis == null)
             {
                 throw new InvalidDataException("Um dos campos obrigatórios está vazio.");
             }
+
+            if(veiculo.Id == null){
+                business.Salvar(veiculo);
+            }
+            else
+            {
+                Veiculo veiculoSalvo = business.BuscarPorId(veiculo.Id.GetValueOrDefault());
+
+                veiculoSalvo.Localidade = veiculo.Localidade;
+                veiculoSalvo.Modelo = veiculo.Modelo;
+                veiculoSalvo.Chassis = veiculo.Chassis;
+                veiculoSalvo.Diaria = veiculo.Diaria;
+
+                business.Editar(veiculoSalvo);
+            }
+
         }
 
         [HttpDelete]
         public void Excluir(int id)
         {
-            business.excluir(business.buscarPorId(id));
+            business.Excluir(business.BuscarPorId(id));
         }
     }
 }

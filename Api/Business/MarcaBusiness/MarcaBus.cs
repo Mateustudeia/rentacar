@@ -17,17 +17,17 @@ namespace Api.Business.MarcaBusiness
             return repositorio.Consultar();
         }
 
-        //public Marca buscarPorId(int id)
+        //public Marca BuscarPorId(int id)
         //{
         //    return repositorio.RetornarPorId(id);
         //}
 
-        //public Marca salvar(Marca marca)
+        //public Marca Salvar(Marca marca)
         //{
         //    return repositorio.Inserir(marca);
         //}
 
-        //public Marca editar(Marca novaMarca)
+        //public Marca Editar(Marca novaMarca)
         //{
         //    Marca marcaSalva = repositorio.RetornarPorId(novaMarca.Id.GetValueOrDefault());
 
@@ -43,7 +43,7 @@ namespace Api.Business.MarcaBusiness
         //    return marcaSalva;
         //}
 
-        //public bool excluir(Marca marca)
+        //public bool Excluir(Marca marca)
         //{
         //    return repositorio.Excluir(marca);
         //}
