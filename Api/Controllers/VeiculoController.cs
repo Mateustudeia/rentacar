@@ -42,6 +42,7 @@ namespace Api.Controllers
             }
         }
 
+        [HttpDelete]
         public void Excluir(int id)
         {
             business.excluir(business.buscarPorId(id));

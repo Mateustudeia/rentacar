@@ -9,7 +9,6 @@ namespace Repository.Entities
         public virtual int CodigoIbge { get; set; }
         public virtual String Nome { get; set; }
         public virtual Estado Estado { get; set; }
-        public virtual IList<Localidade> Localidades { get; set; }
     }
 
     public class MunicipioMap : ClassMap<Municipio>
@@ -19,8 +18,7 @@ namespace Repository.Entities
             Table("municipio");
             Id(x => x.CodigoIbge).Column("codigo_ibge").GeneratedBy.Identity();
             Map(x => x.Nome).Column("nome");
-            References(x => x.Estado);
-            HasMany(x => x.Localidades);
+            References(x => x.Estado).Not.LazyLoad();
         }
     }
 }

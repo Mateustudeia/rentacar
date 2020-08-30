@@ -25,7 +25,7 @@ namespace Repository.Entities
             Map(x => x.Logradouro).Column("logradouro");
             Map(x => x.Numero).Column("numero");
             Map(x => x.Nome).Column("nome");
-            References(x => x.Municipio);
+            References(x => x.Municipio).Not.LazyLoad();
             //HasMany(x => x.Veiculos).Not.LazyLoad();
         }
     }
