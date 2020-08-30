@@ -40,7 +40,7 @@ namespace Repository.Repositories
                     {
                         Veiculo veiculo = RetornarPorId(id);
 
-                        if (localidade == null || veiculo.Localidade == localidade)
+                        if (localidade == null || veiculo.Localidade.Id == localidade.Id)
                         {
                             veiculos.Add(veiculo);
                         }
