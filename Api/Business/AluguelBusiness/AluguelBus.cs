@@ -1,5 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Management.Instrumentation;
+using System.Web.UI.WebControls;
+using Api.Business.AluguelBusiness;
 using Repository.Entities;
 using Repository.Repositories;
 
@@ -7,51 +12,54 @@ namespace Api.Business.ClienteBusiness
 {
     public class AluguelBus
     {
-        private ClienteRepositorio repositorio = new ClienteRepositorio();
+        private AluguelRepositorio repositorio = new AluguelRepositorio();
 
-        public IList<Cliente> listar()
+        public IList<Aluguel> listar()
         {
             return repositorio.Consultar();
         }
 
-        public Cliente buscarPorId(int id)
+        public Aluguel buscarPorId(int id)
         {
             return repositorio.RetornarPorId(id);
         }
 
-        public Cliente salvar(Cliente cliente)
+        public Aluguel alugar(AluguelDTO aluguel)
         {
-            return repositorio.Inserir(cliente);
-        }
-
-        internal Cliente buscarPorCpf(string cpf)
-        {
-            return repositorio.buscarPorCpf(cpf);
-        }
-
-        public Cliente editar(Cliente novoCliente)
-        {
-            Cliente clienteSalvo = repositorio.RetornarPorId(novoCliente.Id.GetValueOrDefault());
-
-            if (clienteSalvo == null)
+            if (aluguel.DataEmprestimo > aluguel.DataDevolucao)
             {
-                throw new InstanceNotFoundException("O cliente " + novoCliente.Nome + " não pôde ser encontrado na base de dados.");
+                throw new Exception("A data de empréstimo deve ser anterior à data de entrega.");
             }
 
-            clienteSalvo.Nome = novoCliente.Nome;
-            clienteSalvo.Telefone = novoCliente.Telefone;
-            clienteSalvo.Nascimento = novoCliente.Nascimento;
-            clienteSalvo.Cpf = novoCliente.Cpf;
-            clienteSalvo.Email = novoCliente.Email;
+            VeiculoRepositorio veiculoRepositorio = new VeiculoRepositorio();
 
-            repositorio.Alterar(clienteSalvo);
+            DateTime inicio = aluguel.DataEmprestimo.GetValueOrDefault();
+            DateTime entrega = aluguel.DataDevolucao.GetValueOrDefault();
 
-            return clienteSalvo;
+            IList<Veiculo> veiculosDisponiveis = veiculoRepositorio.listarDisponiveis(inicio, entrega);
+
+            Veiculo veiculo = veiculosDisponiveis.FirstOrDefault(x => x.Id == aluguel.Veiculo.Id);
+
+            if (veiculo == null)
+            {
+                throw new Exception("Veículo indisponível durante o período selecionado.");
+            }
+
+            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+
+            Aluguel novoAluguel = new Aluguel();
+
+            novoAluguel.DataEmprestimo = inicio;
+            novoAluguel.DataDevolucaoContratada = entrega;
+            novoAluguel.Veiculo = veiculo;
+            novoAluguel.Clientes.Add(clienteRepositorio.buscarPorCpf(aluguel.Cpf));
+
+            return repositorio.Inserir(novoAluguel);
         }
 
-        public bool excluir(Cliente cliente)
+        public bool excluir(Aluguel aluguel)
         {
-            return repositorio.Excluir(cliente);
+            return repositorio.Excluir(aluguel);
         }
     }
 }

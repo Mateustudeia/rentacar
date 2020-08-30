@@ -14,13 +14,13 @@ namespace Api.Controllers
         AluguelBus business = new AluguelBus();
 
         [HttpGet]
-        public IEnumerable<Cliente> Listar()
+        public IEnumerable<Aluguel> Listar()
         {
             return business.listar();
         }
 
         [HttpGet]
-        public Cliente Get(int id)
+        public Aluguel Get(int id)
         {
             return business.buscarPorId(id);
         }
@@ -28,8 +28,7 @@ namespace Api.Controllers
         [HttpPost]
         public void Alugar([FromBody]AluguelDTO aluguel)
         {
-            // Isso será implementado logo em brevaa :)
-            throw new NotImplementedException();
+            business.alugar(aluguel);
         }
 
         [HttpDelete]

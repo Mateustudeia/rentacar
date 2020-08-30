@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+using Repository.Entities;
 
 namespace Api.Business.AluguelBusiness
 {
@@ -8,14 +7,7 @@ namespace Api.Business.AluguelBusiness
     {
         public virtual string Cpf { get; set; }
         public virtual DateTime? DataEmprestimo { get; set; }
-        public virtual DateTime? DaraDevolucao { get; set; }
-        public virtual IList<int> Veiculos { get; set; }
-
-        //{
-        //    Cpf: null,
-        //    DataEmprestimo: null,
-        //    DataDevolucao: null,
-        //    Veiculos: [],
-        //}
+        public virtual DateTime? DataDevolucao { get; set; }
+        public virtual Veiculo Veiculo { get; set; }
     }
 }

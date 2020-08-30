@@ -12,7 +12,7 @@ namespace Repository.Repositories
 {
     public class VeiculoRepositorio : Repositorio<Veiculo>
     {
-        public IList<Veiculo> listarDisponiveis(DateTime begin, DateTime end, Localidade localidade)
+        public IList<Veiculo> listarDisponiveis(DateTime begin, DateTime end, Localidade localidade = null)
         {
             using (ISession session = FluentNHibernateHelper.AbrirSession())
             {
@@ -26,7 +26,10 @@ namespace Repository.Repositories
                             .Where(x => x.DataEmprestimo > begin)
                             .Where(x => x.DataEmprestimo < end));
 
-                    query = query.Where(x => x.Localidade == localidade);
+                    if (localidade != null)
+                    {
+                        query = query.Where(x => x.Localidade == localidade);
+                    }
 
                     IList<Veiculo> veiculos = query.List();
 
