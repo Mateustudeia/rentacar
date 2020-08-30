@@ -17,7 +17,7 @@ namespace Repository.Entities
         public VeiculoMap()
         {
             Table("veiculo");
-            Id(x => x.Id).Column("id");
+            Id(x => x.Id).Column("id").GeneratedBy.Identity();
             Map(x => x.Chassis).Column("chassis");
             Map(x => x.Diaria).Column("diaria");
             References(x => x.Localidade).Not.LazyLoad();

@@ -20,7 +20,7 @@ namespace Repository.Entities
         public LocalidadeMap()
         {
             Table("localidade");
-            Id(x => x.Id).Column("id");
+            Id(x => x.Id).Column("id").GeneratedBy.Identity();
             Map(x => x.Bairro).Column("bairro");
             Map(x => x.Logradouro).Column("logradouro");
             Map(x => x.Numero).Column("numero");

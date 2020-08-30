@@ -17,7 +17,7 @@ namespace Repository.Entities
         public EstadoMap()
         {
             Table("estado");
-            Id(x => x.Id).Column("id");
+            Id(x => x.Id).Column("id").GeneratedBy.Identity();
             Map(x => x.Sigla).Column("sigla");
             Map(x => x.Nome).Column("nome");
             HasMany(x => x.Municipio);

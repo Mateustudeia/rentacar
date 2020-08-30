@@ -15,7 +15,7 @@ namespace Repository.Entities
         public MarcaMap()
         {
             Table("marca");
-            Id(x => x.Id).Column("id");
+            Id(x => x.Id).Column("id").GeneratedBy.Identity();
             Map(x => x.Nome).Column("nome");
         }
     }

@@ -19,7 +19,7 @@ namespace Repository.Entities
         public ModeloMap()
         {
             Table("modelo");
-            Id(x => x.Id).Column("id");
+            Id(x => x.Id).Column("id").GeneratedBy.Identity();
             Map(x => x.Nome).Column("nome");
             Map(x => x.Ano).Column("ano");
             Map(x => x.Versao).Column("versao");

@@ -17,7 +17,7 @@ namespace Repository.Entities
         public MunicipioMap()
         {
             Table("municipio");
-            Id(x => x.CodigoIbge).Column("codigo_ibge");
+            Id(x => x.CodigoIbge).Column("codigo_ibge").GeneratedBy.Identity();
             Map(x => x.Nome).Column("nome");
             References(x => x.Estado);
             HasMany(x => x.Localidades);

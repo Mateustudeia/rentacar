@@ -20,7 +20,7 @@ namespace Repository.Entities
         public AluguelMap()
         {
             Table("aluguel");
-            Id(x => x.Id).Column("id");
+            Id(x => x.Id).Column("id").GeneratedBy.Identity();
             Id(x => x.DataEmprestimo).Column("data_emprestimo");
             Id(x => x.DataDevolucaoContratada).Column("data_devolucao_contratada");
             Id(x => x.DataDevolucao).Column("data_devolucao");
