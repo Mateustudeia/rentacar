@@ -18,11 +18,13 @@ namespace Api.Controllers
             return business.Listar();
         }
 
+        [HttpGet]
         public Veiculo Get(int id)
         {
             return business.BuscarPorId(id);
         }
 
+        [HttpPost]
         public IList<Veiculo> FiltrarPorDataLocalidade(VeiculoDto filtro)
         {
             return business.DisponiveisEntreDatas(filtro.DataEmprestimo, filtro.DataDevolucao, filtro.Localidade);
