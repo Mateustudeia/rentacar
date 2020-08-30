@@ -196,6 +196,7 @@
     <Compile Include="Business\AluguelBusiness\AluguelBus.cs" />
     <Compile Include="Business\MarcaBusiness\MarcaBus.cs" />
     <Compile Include="Business\ClienteBusiness\ClienteBus.cs" />
+    <Compile Include="Business\ModeloBusiness\ModeloBus.cs" />
     <Compile Include="Business\VeiculoBusiness\VeiculoBus.cs" />
     <Compile Include="Controllers\AluguelController.cs" />
     <Compile Include="Controllers\EstadoController.cs" />

@@ -20,40 +20,40 @@ namespace Api.Controllers
             return repositorio.listar();
         }
 
-        [HttpGet]
-        public Marca Get(int id)
-        {
-            return repositorio.buscarPorId(id);
-        }
+        //[HttpGet]
+        //public Marca Get(int id)
+        //{
+        //    return repositorio.buscarPorId(id);
+        //}
 
-        [HttpPost]
-        public void Salvar([FromBody]Marca marca)
-        {
-            if (!marca.Nome.IsNullOrWhiteSpace())
-            {
-                if (marca.Id == null) {
+        //[HttpPost]
+        //public void Salvar([FromBody]Marca marca)
+        //{
+        //    if (!marca.Nome.IsNullOrWhiteSpace())
+        //    {
+        //        if (marca.Id == null) {
 
-                    Marca marcaSalva = repositorio.buscarPorId(marca.Id.GetValueOrDefault());
+        //            Marca marcaSalva = repositorio.buscarPorId(marca.Id.GetValueOrDefault());
 
-                    marcaSalva.Modelos.Clear();
+        //            marcaSalva.Modelos.Clear();
 
-                    marcaSalva.Nome = marca.Nome;
-                    marcaSalva.Modelos = marca.Modelos;
+        //            marcaSalva.Nome = marca.Nome;
+        //            marcaSalva.Modelos = marca.Modelos;
 
-                }
+        //        }
 
-                repositorio.salvar(marca);
-            }
-            else
-            {
-                throw new InvalidDataException("Um dos campos obrigatórios está vazio.");
-            }
-        }
+        //        repositorio.salvar(marca);
+        //    }
+        //    else
+        //    {
+        //        throw new InvalidDataException("Um dos campos obrigatórios está vazio.");
+        //    }
+        //}
 
-        [HttpPost]
-        public void Excluir(int id)
-        {
-            repositorio.excluir(repositorio.buscarPorId(id));
-        }
+        //[HttpPost]
+        //public void Excluir(int id)
+        //{
+        //    repositorio.excluir(repositorio.buscarPorId(id));
+        //}
     }
 }

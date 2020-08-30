@@ -8,7 +8,6 @@ namespace Repository.Entities
     {
         public virtual int? Id { get; set; }
         public virtual String Nome { get; set; }
-        public virtual IList<Modelo> Modelos { get; set; }
     }
 
     public class MarcaMap : ClassMap<Marca>

@@ -17,35 +17,35 @@ namespace Api.Business.MarcaBusiness
             return repositorio.Consultar();
         }
 
-        public Marca buscarPorId(int id)
-        {
-            return repositorio.RetornarPorId(id);
-        }
+        //public Marca buscarPorId(int id)
+        //{
+        //    return repositorio.RetornarPorId(id);
+        //}
 
-        public Marca salvar(Marca marca)
-        {
-            return repositorio.Inserir(marca);
-        }
+        //public Marca salvar(Marca marca)
+        //{
+        //    return repositorio.Inserir(marca);
+        //}
 
-        public Marca editar(Marca novaMarca)
-        {
-            Marca marcaSalva = repositorio.RetornarPorId(novaMarca.Id.GetValueOrDefault());
+        //public Marca editar(Marca novaMarca)
+        //{
+        //    Marca marcaSalva = repositorio.RetornarPorId(novaMarca.Id.GetValueOrDefault());
 
-            if (marcaSalva == null)
-            {
-                throw new InstanceNotFoundException("A marca " + novaMarca.Nome + " não pôde ser encontrado na base de dados.");
-            }
+        //    if (marcaSalva == null)
+        //    {
+        //        throw new InstanceNotFoundException("A marca " + novaMarca.Nome + " não pôde ser encontrado na base de dados.");
+        //    }
 
-            marcaSalva.Nome = novaMarca.Nome;
+        //    marcaSalva.Nome = novaMarca.Nome;
 
-            repositorio.Alterar(marcaSalva);
+        //    repositorio.Alterar(marcaSalva);
 
-            return marcaSalva;
-        }
+        //    return marcaSalva;
+        //}
 
-        public bool excluir(Marca marca)
-        {
-            return repositorio.Excluir(marca);
-        }
+        //public bool excluir(Marca marca)
+        //{
+        //    return repositorio.Excluir(marca);
+        //}
     }
 }
