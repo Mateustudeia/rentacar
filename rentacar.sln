@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{BE427480-D478-45B2-BDB1-ADD8CB27F439}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rentacar.Test", "Rentacar.Test\Rentacar.Test.csproj", "{4ADFD5D2-7839-41F8-9B05-5C791C81F432}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE427480-D478-45B2-BDB1-ADD8CB27F439} = {BE427480-D478-45B2-BDB1-ADD8CB27F439}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{BE427480-D478-45B2-BDB1-ADD8CB27F439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE427480-D478-45B2-BDB1-ADD8CB27F439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE427480-D478-45B2-BDB1-ADD8CB27F439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ADFD5D2-7839-41F8-9B05-5C791C81F432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ADFD5D2-7839-41F8-9B05-5C791C81F432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ADFD5D2-7839-41F8-9B05-5C791C81F432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ADFD5D2-7839-41F8-9B05-5C791C81F432}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
