@@ -11,14 +11,14 @@ namespace Repository.Repositories
 {
     public class ModeloRepositorio : Repositorio<Modelo>
     {
-        public Modelo buscarPorMarca(int id)
+        public IList<Modelo> buscarPorMarca(int id)
         {
             using (ISession session = FluentNHibernateHelper.AbrirSession())
             {
                 try
                 {
                     var query = session.Query<Modelo>();
-                    Modelo modelo = query.Where(x => x.Marca.Id == id).First();
+                    IList<Modelo> modelo = query.Where(x => x.Marca.Id == id).ToList();
                     return modelo;
                 }
                 catch (Exception ex)

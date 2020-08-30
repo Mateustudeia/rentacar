@@ -21,7 +21,7 @@ namespace Api.Business.ModeloBusiness
             return repositorio.RetornarPorId(id);
         }
 
-        public Modelo buscarPorMarca(int id)
+        public IList<Modelo> buscarPorMarca(int id)
         {
             return repositorio.buscarPorMarca(id);
         }

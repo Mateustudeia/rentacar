@@ -28,7 +28,7 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        public Modelo GetByMarca(int id)
+        public IEnumerable<Modelo> GetByMarca(int id)
         {
             return business.buscarPorMarca(id);
         }
