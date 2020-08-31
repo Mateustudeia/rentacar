@@ -21,12 +21,19 @@ namespace Repository.Entities
         {
             Table("aluguel");
             Id(x => x.Id).Column("id").GeneratedBy.Identity();
-            Id(x => x.DataEmprestimo).Column("data_emprestimo");
-            Id(x => x.DataDevolucaoContratada).Column("data_devolucao_contratada");
-            Id(x => x.DataDevolucao).Column("data_devolucao");
-            Id(x => x.ValorTotal).Column("valor_total");
-            References(x => x.Veiculo).Not.LazyLoad();
-            HasManyToMany(x => x.Clientes).Table("cliente_aluguel").ParentKeyColumn("aluguel_id").ChildKeyColumn("client_id");
+            Map(x => x.DataEmprestimo).Column("data_emprestimo");
+            Map(x => x.DataDevolucaoContratada).Column("data_devolucao_contratada");
+            Map(x => x.DataDevolucao).Column("data_devolucao");
+            Map(x => x.ValorTotal).Column("valor_total");
+
+            References(x => x.Veiculo)
+                .Not.LazyLoad();
+
+            HasManyToMany(x => x.Clientes)
+                .Table("cliente_aluguel")
+                .ParentKeyColumn("aluguel_id")
+                .ChildKeyColumn("cliente_id")
+                .Not.LazyLoad();
         }
     }
 }
