@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Entities\Aluguel.cs" />
     <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Entities\Estado.cs" />
     <Compile Include="Entities\Localidade.cs" />
     <Compile Include="Entities\Marca.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Repositories\ClienteRepositorio.cs" />
     <Compile Include="Repositories\Interfaces\ICrud.cs" />
     <Compile Include="Repositories\Repositorio.cs" />
+    <Compile Include="Repositories\UsuarioRepositorio.cs" />
     <Compile Include="Repositories\VeiculoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>

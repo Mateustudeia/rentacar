@@ -201,6 +201,7 @@
     <Compile Include="Business\VeiculoBusiness\VeiculoBus.cs" />
     <Compile Include="Controllers\AluguelController.cs" />
     <Compile Include="Controllers\EstadoController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MarcasController.cs" />
     <Compile Include="Controllers\LocalidadesController.cs" />
     <Compile Include="Controllers\ModeloController.cs" />
