@@ -11,7 +11,7 @@ namespace Api.Controllers
     public class LoginController : Controller
     {
         [HttpPost]
-        public bool Login(string login, string senha)
+        public bool Logar(string login, string senha)
         {
             UsuarioRepositorio repositorio = new UsuarioRepositorio();
 
