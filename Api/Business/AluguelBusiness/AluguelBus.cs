@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management.Instrumentation;
+using System.Web.Optimization;
 using System.Web.UI.WebControls;
 using Api.Business.AluguelBusiness;
 using Repository.Entities;
@@ -53,6 +54,7 @@ namespace Api.Business.ClienteBusiness
             }
 
             Aluguel novoAluguel = new Aluguel();
+            novoAluguel.Clientes = new List<Cliente>();
 
             novoAluguel.DataEmprestimo = inicio;
             novoAluguel.DataDevolucaoContratada = entrega;
