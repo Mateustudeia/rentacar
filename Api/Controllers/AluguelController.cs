@@ -19,7 +19,7 @@ namespace Api.Controllers
             return business.Listar();
         }
 
-        [HttpGet]
+        [HttpPost]
         public IEnumerable<Aluguel> ListarPorCliente(Cliente cliente)
         {
             return business.ListarPorCliente(cliente);
