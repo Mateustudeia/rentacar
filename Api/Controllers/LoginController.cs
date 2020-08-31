@@ -8,7 +8,7 @@ using Repository.Repositories;
 
 namespace Api.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : ApiController
     {
         [HttpPost]
         public bool Logar(string login, string senha)
