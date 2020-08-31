@@ -17,13 +17,13 @@ namespace Repository.Repositories
                 try
                 {
                     var query = session.Query<Aluguel>()
-                        .Where(x => x.Clientes.FirstOrDefault().Id == cliente.Id);
+                        .Where(x => x.Clientes.FirstOrDefault() == cliente);
 
                     return query.ToList();
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Erro ao buscar os aluguéis referentes ao cliente " + cliente.Nome);
+                    throw new Exception("Erro ao buscar os aluguéis referentes ao cliente " + cliente.Nome, ex);
                 }
             }
         }
