@@ -15,7 +15,7 @@ namespace Repository.Repositories
 {
     public class VeiculoRepositorio : Repositorio<Veiculo>
     {
-        public IList<Veiculo> listarDisponiveis(DateTime begin, DateTime end, Localidade localidade = null)
+        public IList<Veiculo> ListarDisponiveis(DateTime begin, DateTime end, Localidade localidade = null)
         {
             using (ISession session = FluentNHibernateHelper.AbrirSession())
             {
@@ -28,7 +28,7 @@ namespace Repository.Repositories
                                          "  from aluguel a " +
                                          "  where a.data_emprestimo <= '" + begin.ToString("yyyy-MM-dd") + "'" +
                                          "  and a.data_devolucao_contratada >= '" + end.ToString("yyyy-MM-dd") + "'" +
-                                         "  and a.data_devolucao is not null" +
+                                         "  and a.data_devolucao is null" +
                                          " )";
 
                     var query = session.CreateSQLQuery(stringQuery);

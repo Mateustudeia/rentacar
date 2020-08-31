@@ -16,25 +16,31 @@ namespace Api.Controllers
         [HttpGet]
         public IEnumerable<Aluguel> Listar()
         {
-            return business.listar();
+            return business.Listar();
+        }
+
+        [HttpPost]
+        public IEnumerable<Aluguel> ListarPorCliente(Cliente cliente)
+        {
+            return business.ListarPorCliente(cliente);
         }
 
         [HttpGet]
         public Aluguel Get(int id)
         {
-            return business.buscarPorId(id);
+            return business.BuscarPorId(id);
         }
 
         [HttpPost]
         public void Alugar([FromBody]AluguelDTO aluguel)
         {
-            business.alugar(aluguel);
+            business.Alugar(aluguel);
         }
 
         [HttpDelete]
         public void Excluir(int id)
         {
-            business.excluir(business.buscarPorId(id));
+            business.Excluir(business.BuscarPorId(id));
         }
     }
 }

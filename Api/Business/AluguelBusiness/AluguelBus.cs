@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management.Instrumentation;
+using System.Web.Optimization;
 using System.Web.UI.WebControls;
 using Api.Business.AluguelBusiness;
 using Repository.Entities;
@@ -14,29 +15,36 @@ namespace Api.Business.ClienteBusiness
     {
         private AluguelRepositorio repositorio = new AluguelRepositorio();
 
-        public IList<Aluguel> listar()
+        private ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+
+        private VeiculoRepositorio veiculoRepositorio = new VeiculoRepositorio();
+
+        public IList<Aluguel> Listar()
         {
             return repositorio.Consultar();
         }
 
-        public Aluguel buscarPorId(int id)
+        public IEnumerable<Aluguel> ListarPorCliente(Cliente cliente)
+        {
+            return repositorio.RetornarPorCliente(cliente);
+        }
+
+        public Aluguel BuscarPorId(int id)
         {
             return repositorio.RetornarPorId(id);
         }
 
-        public Aluguel alugar(AluguelDTO aluguel)
+        public Aluguel Alugar(AluguelDTO aluguel)
         {
             if (aluguel.DataEmprestimo > aluguel.DataDevolucao)
             {
                 throw new Exception("A data de empréstimo deve ser anterior à data de entrega.");
             }
 
-            VeiculoRepositorio veiculoRepositorio = new VeiculoRepositorio();
-
             DateTime inicio = aluguel.DataEmprestimo.GetValueOrDefault();
             DateTime entrega = aluguel.DataDevolucao.GetValueOrDefault();
 
-            IList<Veiculo> veiculosDisponiveis = veiculoRepositorio.listarDisponiveis(inicio, entrega);
+            IList<Veiculo> veiculosDisponiveis = veiculoRepositorio.ListarDisponiveis(inicio, entrega);
 
             Veiculo veiculo = veiculosDisponiveis.FirstOrDefault(x => x.Id == aluguel.Veiculo.Id);
 
@@ -45,9 +53,8 @@ namespace Api.Business.ClienteBusiness
                 throw new Exception("Veículo indisponível durante o período selecionado.");
             }
 
-            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
-
             Aluguel novoAluguel = new Aluguel();
+            novoAluguel.Clientes = new List<Cliente>();
 
             novoAluguel.DataEmprestimo = inicio;
             novoAluguel.DataDevolucaoContratada = entrega;
@@ -57,7 +64,7 @@ namespace Api.Business.ClienteBusiness
             return repositorio.Inserir(novoAluguel);
         }
 
-        public bool excluir(Aluguel aluguel)
+        public bool Excluir(Aluguel aluguel)
         {
             return repositorio.Excluir(aluguel);
         }

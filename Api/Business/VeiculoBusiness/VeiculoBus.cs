@@ -33,7 +33,7 @@ namespace Api.Business.VeiculoBusiness
                 throw new Exception("A data de início deve ser anterior à data de devolução");
             }
 
-            return repositorio.listarDisponiveis(begin, end, localidade);
+            return repositorio.ListarDisponiveis(begin, end, localidade);
         }
 
         public Veiculo Editar(Veiculo novoVeiculo)
