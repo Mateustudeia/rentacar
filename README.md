@@ -9,29 +9,59 @@ A plataforma RentaCar será um sistema web destinado a oferecer aos seus usuári
 │   ├── src
 │        ├── backend
 │        │   ├── Api
+│        │   │  ├── Areas
+│        │   │  ├── bin
+│        │   │  ├── Business
+│        │   │      ├── AluguelBusiness
+│        │   │      ├── ClienteBusiness
+│        │   │      ├── MarcaBusiness
+│        │   │      ├── ModeloBusiness
+│        │   │      ├── VeiculoBusiness
+│        │   │  ├── Content
+│        │   │  ├── Controllers
+│        │   │  ├── fonts
+│        │   │  ├── obj
+│        │   │  ├── Properties
+│        │   │  ├── Scripts
+│        │   │  ├── Views
+│        │   │  ├── Api.csproj
+│        │   │  ├── Api.csproj.user
+│        │   │  ├── Web.config
+│        │   │  ├── Web.Debug.config
+│        │   │  ├── Web.Release.config
 │        │   ├── packages
-│        │   ├── rentacar
 │        │   ├── Rentacar.Test
 │        │   ├── Rentacar.TestSelenium
 │        │   ├── Repository
-│        │   ├── WebApp
 │        │   ├── dump.sql
 │        │   ├── rentacar.sln
 │        │
-│        ├──frontend
-│            ├──public
-│            ├──src
+│        ├── frontend
+│            ├── public
+│            ├── src
 │                ├──components
-│                ├──constants
-│                ├──screens 
-│                ├──App.css
-│                ├──App.js
-│                ├──index.css
-│                ├──index.js
-│            ├──LICENSE
-│            ├──package.json
-│            ├──README.md 
-│            ├──yarn.lock
+│                   ├── CurrencyInput
+│                   ├── ModalAlugarVeiculo
+│                   ├── ModalCadastrarCliente
+│                   ├── ModalCadastrarModelo
+│                   ├── ModalCadastrarVeiculo
+│                   ├── ModalDevolverVeiculo
+│                   ├── Navbar
+│                ├── constants
+│                ├── screens 
+│                   ├── Clientes.css
+│                   ├── Home.js
+│                   ├── Locacao.css
+│                   ├── Login.js
+│                   ├── Veiculos
+│                ├── App.css
+│                ├── App.js
+│                ├── index.css
+│                ├── index.js
+│            ├── LICENSE
+│            ├── package.json
+│            ├── README.md 
+│            ├── yarn.lock
  
 
 ```
