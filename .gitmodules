@@ -1,0 +1,3 @@
+[submodule "src/frontend/rentacar"]
+	path = src/frontend/rentacar
+	url = git@github.com:teofilosalgado/rentacar.git
