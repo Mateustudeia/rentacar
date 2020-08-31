@@ -6,28 +6,33 @@ A plataforma RentaCar será um sistema web destinado a oferecer aos seus usuári
 ```bash
 ├── rentacar
 │   ├── requisitos
-│     ├── Identity
-│       ├── Pages
-│   ├── bin
-│   ├── Controllers
-│   ├── Data
-│     ├── Migrations
-│   ├── Models
-│   ├── obj
-│   ├── Properties
-│   ├── Views
-│     ├── Clientes
-│     ├── Home
-│     ├── Operadores
-│     ├── Produtos
-│     ├── Shared
-│     ├── Vendas
-│   ├── wwwroot
-│   ├── appsettings.Development.json
-│   ├── appsettings.json
-│   ├── Program.cs
-│   ├── ProjetoEng.csproj
-│   └── Startup.cs
+│   ├── src
+│        ├── backend
+│        │   ├── Api
+│        │   ├── packages
+│        │   ├── rentacar
+│        │   ├── Rentacar.Test
+│        │   ├── Rentacar.TestSelenium
+│        │   ├── Repository
+│        │   ├── WebApp
+│        │   ├── dump.sql
+│        │   ├── rentacar.sln
+│        │
+│        ├──frontend
+│            ├──public
+│            ├──src
+│                ├──components
+│                ├──constants
+│                ├──screens 
+│                ├──App.css
+│                ├──App.js
+│                ├──index.css
+│                ├──index.js
+│            ├──LICENSE
+│            ├──package.json
+│            ├──README.md 
+│            ├──yarn.lock
+ 
 
 ```
 
@@ -39,6 +44,10 @@ A plataforma RentaCar será um sistema web destinado a oferecer aos seus usuári
 - [HTML 5](https://pt.wikipedia.org/wiki/HTML5)
 - [Bootstrap](https://getbootstrap.com/)
 - [Javascript](https://pt.wikipedia.org/wiki/JavaScript)
+- [React](https://pt-br.reactjs.org/)
+- [Redux Saga](https://redux-saga.js.org/)
+- [Axios](https://github.com/axios/axios)
+- [Antd](https://ant.design/docs/react/introduce)
 
 ## Regras para Codificação do Sistema
 - Nomear variáveis e funções em padrão Camel Case;
