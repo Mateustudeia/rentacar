@@ -1,13 +1,11 @@
-![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/33124024/69918807-27291180-1455-11ea-9a28-052bf3b9bf97.png)
-
 
 # RentaCar | Rent A Car - alugue um carro.
 A plataforma RentaCar será um sistema web destinado a oferecer aos seus usuários a locação de veículos, permitindo a realização de todo o processo burocrático online. Por meio da plataforma é possível um cliente realizar seu cadastro e, a partir de seu CPF, poderá efetuar uma locação. Seu principal objetivo é oferecer comodidade ao cliente, garantindo a segurança dos seus dados. O Rentacar possui um modelo de trabalho baseado no conceito de CRUD, ou seja, permite o cadastro, busca, edição e deleção de dados. Tais dados são manipulados pelos usuários logados. Para ter acesso ao sistema é necessário a autenticação através de login, permitido apenas para os usuários registrados anteriormente no sistema.
 
 ## Estrutura do Diretório
 ```bash
-├── ProjetoEng
-│   ├── Areas
+├── rentacar
+│   ├── requisitos
 │     ├── Identity
 │       ├── Pages
 │   ├── bin
