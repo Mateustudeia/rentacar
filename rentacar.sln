@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rentacar.Test", "Rentacar.T
 		{BE427480-D478-45B2-BDB1-ADD8CB27F439} = {BE427480-D478-45B2-BDB1-ADD8CB27F439}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rentacar.TestSelenium", "Rentacar.TestSelenium\Rentacar.TestSelenium.csproj", "{8496CD88-4F60-489F-82AE-BD0B6356B5E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{4ADFD5D2-7839-41F8-9B05-5C791C81F432}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ADFD5D2-7839-41F8-9B05-5C791C81F432}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ADFD5D2-7839-41F8-9B05-5C791C81F432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8496CD88-4F60-489F-82AE-BD0B6356B5E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8496CD88-4F60-489F-82AE-BD0B6356B5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8496CD88-4F60-489F-82AE-BD0B6356B5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8496CD88-4F60-489F-82AE-BD0B6356B5E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
