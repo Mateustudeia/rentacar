@@ -15,7 +15,7 @@ namespace Repository.Repositories
 {
     public class VeiculoRepositorio : Repositorio<Veiculo>
     {
-        public IList<Veiculo> listarDisponiveis(DateTime begin, DateTime end, Localidade localidade = null)
+        public IList<Veiculo> ListarDisponiveis(DateTime begin, DateTime end, Localidade localidade = null)
         {
             using (ISession session = FluentNHibernateHelper.AbrirSession())
             {
