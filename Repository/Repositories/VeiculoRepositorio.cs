@@ -28,7 +28,7 @@ namespace Repository.Repositories
                                          "  from aluguel a " +
                                          "  where a.data_emprestimo <= '" + begin.ToString("yyyy-MM-dd") + "'" +
                                          "  and a.data_devolucao_contratada >= '" + end.ToString("yyyy-MM-dd") + "'" +
-                                         "  and a.data_devolucao is not null" +
+                                         "  and a.data_devolucao is null" +
                                          " )";
 
                     var query = session.CreateSQLQuery(stringQuery);
