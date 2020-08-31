@@ -11,36 +11,42 @@ namespace Api.Controllers
 {
     public class AluguelController : ApiController
     {
-        AluguelBus business = new AluguelBus();
+        readonly AluguelBus _business = new AluguelBus();
 
         [HttpGet]
         public IEnumerable<Aluguel> Listar()
         {
-            return business.Listar();
+            return _business.Listar();
         }
 
         [HttpPost]
         public IEnumerable<Aluguel> ListarPorCliente(Cliente cliente)
         {
-            return business.ListarPorCliente(cliente);
+            return _business.ListarPorCliente(cliente);
         }
 
         [HttpGet]
         public Aluguel Get(int id)
         {
-            return business.BuscarPorId(id);
+            return _business.BuscarPorId(id);
         }
 
         [HttpPost]
         public void Alugar([FromBody]AluguelDTO aluguel)
         {
-            business.Alugar(aluguel);
+            _business.Alugar(aluguel);
+        }
+
+        [HttpPost]
+        public void Devolver([FromBody]Aluguel aluguel)
+        {
+            _business.Devolver(aluguel);
         }
 
         [HttpDelete]
         public void Excluir(int id)
         {
-            business.Excluir(business.BuscarPorId(id));
+            _business.Excluir(_business.BuscarPorId(id));
         }
     }
 }

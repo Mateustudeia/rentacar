@@ -58,6 +58,7 @@ namespace Api.Business.ClienteBusiness
 
             novoAluguel.DataEmprestimo = inicio;
             novoAluguel.DataDevolucaoContratada = entrega;
+            novoAluguel.DataDevolucao = null;
             novoAluguel.Veiculo = veiculo;
             novoAluguel.Clientes.Add(clienteRepositorio.buscarPorCpf(aluguel.Cpf));
 
@@ -67,6 +68,18 @@ namespace Api.Business.ClienteBusiness
         public bool Excluir(Aluguel aluguel)
         {
             return repositorio.Excluir(aluguel);
+        }
+
+        public Aluguel Devolver(Aluguel aluguel)
+        {
+            aluguel.DataDevolucao = DateTime.Now;
+
+            if (!repositorio.Alterar(aluguel))
+            {
+                throw new Exception("Não foi possível devolver o veículo.");
+            }
+
+            return repositorio.RetornarPorId(aluguel.Id);
         }
     }
 }

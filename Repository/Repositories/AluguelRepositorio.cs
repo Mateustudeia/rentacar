@@ -17,7 +17,8 @@ namespace Repository.Repositories
                 try
                 {
                     var query = session.Query<Aluguel>()
-                        .Where(x => x.Clientes.FirstOrDefault() == cliente);
+                        .Where(x => x.Clientes.FirstOrDefault() == cliente)
+                        .Where(x => x.DataDevolucao == null);
 
                     return query.ToList();
                 }

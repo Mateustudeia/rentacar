@@ -9,7 +9,7 @@ namespace Repository.Entities
         public virtual int Id { get; set; }
         public virtual DateTime DataEmprestimo { get; set; }
         public virtual DateTime DataDevolucaoContratada { get; set; }
-        public virtual DateTime DataDevolucao { get; set; }
+        public virtual DateTime? DataDevolucao { get; set; }
         public virtual float ValorTotal { get; set; }
         public virtual Veiculo Veiculo { get; set; }
         public virtual IList<Cliente> Clientes { get; set; }
