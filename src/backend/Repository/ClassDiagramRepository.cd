@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Repository.Entities.Aluguel" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAIAAAAAAAAAgQAAAAAAAAAFAAAAAAAA=</HashCode>
+      <FileName>Entities\Aluguel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.AluguelMap" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Aluguel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Cliente" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAACAAGAAAA=</HashCode>
+      <FileName>Entities\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.ClienteMap" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Estado" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entities\Estado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.EstadoMap" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Estado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Localidade" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
+      <FileName>Entities\Localidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.LocalidadeMap" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Localidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Marca" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entities\Marca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.MarcaMap" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Marca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Modelo" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entities\Modelo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.ModeloMap" Collapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Modelo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Municipio" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAg=</HashCode>
+      <FileName>Entities\Municipio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.MunicipioMap" Collapsed="true">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Municipio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Usuario" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Entities\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.UsuarioMap" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.Veiculo" Collapsed="true">
+    <Position X="17.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQAAA=</HashCode>
+      <FileName>Entities\Veiculo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Entities.VeiculoMap" Collapsed="true">
+    <Position X="19" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Veiculo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Helper.FluentNHibernateHelper" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helper\FluentNHibernateHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Repositories.AluguelRepositorio" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\AluguelRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Repositories.ClienteRepositorio" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ClienteRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Repositories.ModeloRepositorio" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ModeloRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Repositories.Repositorio&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAACABQAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Repositorio.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Repository.Repositories.UsuarioRepositorio" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Repositories\UsuarioRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository.Repositories.VeiculoRepositorio" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\VeiculoRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Repository.Repositories.Interfaces.ICrud&lt;T&gt;" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAACABQAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Interfaces\ICrud.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
